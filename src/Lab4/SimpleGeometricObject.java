@@ -1,7 +1,5 @@
 package Lab4;
 
-import java.util.Date;
-
 public class SimpleGeometricObject {
     private String color = "white";
     private boolean filled = false;
@@ -15,6 +13,7 @@ public class SimpleGeometricObject {
     public String getColor() { return color; }
     public void setColor(String color) { this.color = color; }
     public boolean isFilled() { return filled; }
+    public void setFilled(boolean filled) { this.filled = filled; }
     public java.util.Date getDateCreated() { return dateCreated; }
     public String toString() {
         return "created on " + dateCreated + "\ncolor: " + color + " and filled: " + filled;
@@ -38,6 +37,9 @@ class Triangle extends SimpleGeometricObject {
     public double getSide3() { return side3; }
 
     // Methods
+    public boolean isFilled() {
+        return super.isFilled() == true;
+    }
     public double getPerimeter() {
         double sum = side1 + side2 + side3;
         double s = sum/2;
@@ -45,10 +47,9 @@ class Triangle extends SimpleGeometricObject {
     }
     public double getArea() {
         double s = getPerimeter();
-        double area = Math.sqrt(s*(s-side1)*(s-side2)*(s-side3));
-        return area;
+        return Math.sqrt(s*(s-side1)*(s-side2)*(s-side3));
     }
     public String toString() {
-        return "Triangle:side1="+side1+"side2="+side2+"side3="+side3;
+        return "Triangle: \nSide1 = "+side1+"\nSide2 = "+side2+"\nSide3 = "+side3;
     }
 }
