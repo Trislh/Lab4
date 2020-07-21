@@ -26,9 +26,8 @@ public class Main {
         }
 
         System.out.println(triAngle.toString());
-        System.out.println("Color: " + triAngle.getColor());
         System.out.println("Area: " + triAngle.getArea() + "\nPerimeter: " + triAngle.getPerimeter());
-        System.out.println("Is the Triangle filled? " + triAngle.isFilled());
+
 
 
     }

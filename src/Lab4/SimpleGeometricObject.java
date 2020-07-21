@@ -50,6 +50,6 @@ class Triangle extends SimpleGeometricObject {
         return Math.sqrt(s*(s-side1)*(s-side2)*(s-side3));
     }
     public String toString() {
-        return "Triangle: \nSide1 = "+side1+"\nSide2 = "+side2+"\nSide3 = "+side3;
+        return super.toString() + "\n" + "Triangle: \nSide1 = "+side1+"\nSide2 = "+side2+"\nSide3 = "+side3;
     }
 }
